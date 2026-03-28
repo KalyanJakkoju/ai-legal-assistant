@@ -78,3 +78,6 @@ _Note: You can also evaluate the modular version of the app by running `unset SS
 3. **Wait for Processing**: The first time you upload a document, the app will break it down into chunks and generate vector embeddings. Future uploads of the identical file will dynamically load from the cache instantly!
 4. **Ask Questions**: Type your legal query in the chat input. For example: _"If a government forbids the right to assemble peacefully which articles are violated and why?"_
 5. **Review Answers**: The AI Lawyer will stream its parsed, formatted reasoning based solely on the text provided in your document.
+
+
+## DO IT IN BASH TERMINAL
