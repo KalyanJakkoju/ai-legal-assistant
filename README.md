@@ -50,3 +50,31 @@ You can install the dependencies using pip (or pipenv if using the Pipfile):
 
 ```bash
 pip install -r requirements.txt
+
+### 3. Environment Variables
+
+Create a `.env` file in the root directory and add your Groq API key:
+
+```env
+GROQ_API_KEY=""
+```
+
+### 4. Run the Application
+
+After installing all the dependencies, start the Streamlit web server by running the upgraded `main.py` application using the following command:
+
+```bash
+unset SSL_CERT_FILE && /c/ProgramData/miniconda3/envs/ai-lawyer/Scripts/streamlit.exe run main.py
+```
+
+_Note: You can also evaluate the modular version of the app by running `unset SSL_CERT_FILE && /c/ProgramData/miniconda3/envs/ai-lawyer/Scripts/streamlit.exe run frontend.py` instead._
+
+---
+
+## 📝 How to Use
+
+1. **Open the App**: Once running, the Streamlit app will open in your default browser at `http://localhost:8501`.
+2. **Upload a PDF**: In the sidebar, upload your target legal document under the "Document" header.
+3. **Wait for Processing**: The first time you upload a document, the app will break it down into chunks and generate vector embeddings. Future uploads of the identical file will dynamically load from the cache instantly!
+4. **Ask Questions**: Type your legal query in the chat input. For example: _"If a government forbids the right to assemble peacefully which articles are violated and why?"_
+5. **Review Answers**: The AI Lawyer will stream its parsed, formatted reasoning based solely on the text provided in your document.
